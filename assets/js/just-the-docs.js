@@ -79,8 +79,8 @@ function initSearch() {
 
       var index = lunr(function(){
         this.ref('id');
-        this.field('title', { boost: 200 });
-        this.field('content', { boost: 2 });
+        this.field('title', { boost: 2 });
+        this.field('content', { boost: 200 });
         {%- if site.search.rel_url != false %}
         this.field('relUrl');
         {%- endif %}
